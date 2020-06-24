@@ -40,7 +40,6 @@ class Main {
                     false
             )
 
-
             XrayPolicyRulesModel rule1 = new XrayPolicyRulesModel(
                     "r1",
                     1,
@@ -84,6 +83,7 @@ class Main {
                 policies = [policy1, policy2]
                 active = true
             }
+
             try {
                 client.v2().policy().create(policy1)
                 println("$policy1.name created successfully")
