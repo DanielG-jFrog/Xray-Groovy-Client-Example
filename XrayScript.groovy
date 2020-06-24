@@ -93,7 +93,7 @@ class Main {
 
             }
             catch (XrayRestClientException erce){
-                println("Caugth a XrayRestClientException Exception: \n $erce")
+                println("Caugth an XrayRestClientException Exception: \n $erce")
             }
             try {
                 client.v2().watch().create(xrayWatch)
