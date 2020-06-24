@@ -87,20 +87,24 @@ class Main {
             try {
                 client.v2().policy().create(policy1)
                 println("$policy1.name created successfully")
-
-                client.v2().policy().create(policy2)
-                println("$policy2.name created successfully")
-
             }
             catch (XrayRestClientException erce){
-                println("Caugth an XrayRestClientException Exception: \n $erce")
+                println("$policy1.name Was not create, caugth an XrayRestClientException Exception: \n $erce")
+            }
+
+            try {
+                client.v2().policy().create(policy2)
+                println("$policy2.name created successfully")
+            }
+            catch (XrayRestClientException erce){
+                println("$policy1.name Was not create, caugth an XrayRestClientException Exception: \n $erce")
             }
             try {
                 client.v2().watch().create(xrayWatch)
                 println("Watch $xrayWatch.name created successfully")
             }
-            catch (XrayRestClientException exception){
-                println("Caugth an Exception: \n $exception")
+            catch (XrayRestClientException erce){
+                println("Caugth an Exception: \n $erce")
             }
         }
         else {
