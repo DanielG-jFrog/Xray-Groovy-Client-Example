@@ -1,0 +1,1 @@
+# This is an example for working with Xray Groovy Client
