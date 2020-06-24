@@ -57,7 +57,6 @@ class Main {
                 true,
                 [] as ArrayList<String>,
                 Severity.MEDIUM
-
         )
 
         XrayPolicyRulesModel rule1 = new XrayPolicyRulesModel(
